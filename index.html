@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi Bolivia — Endless Runner 3D</title>
+<meta name="description" content="Mi Bolivia: endless runner 3D hecho en Unity. Esquiva bloqueos, petardos y gas lacrimógeno por las calles de La Paz y junta 500 votos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header class="nav" id="inicio">
+  <div class="nav__in">
+    <a class="marca" href="#inicio" aria-label="Mi Bolivia, inicio">
+      <span class="marca__franjas" aria-hidden="true"><i></i><i></i><i></i></span>
+      MI BOLIVIA
+    </a>
+    <button class="nav__btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav id="menu" class="nav__menu">
+      <a href="#historia">Historia</a>
+      <a href="#personaje">Personaje</a>
+      <a href="#mecanicas">Mecánicas</a>
+      <a href="#datos">Datos</a>
+      <a href="#jugar" class="nav__cta">Jugar ahora</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 2. Sección principal -->
+  <section class="hero">
+    <div class="contenedor hero__grid">
+      <div class="hero__texto">
+        <span class="etiqueta">ENDLESS RUNNER 3D · UNITY</span>
+        <h1>MI<br>BOLIVIA</h1>
+        <p class="hero__frase">Las calles están bloqueadas. La elección no espera.</p>
+        <p class="hero__desc">El Presi corre por las calles de La Paz en plena jornada de protestas: llantas en llamas,
+          carteles, petardos y gas lacrimógeno se cruzan en su camino. Cada segundo que resiste suma votos;
+          llegar a <strong>500 votos</strong> antes de perder todas las vidas es la única forma de ganar.</p>
+        <div class="hero__botones">
+          <a class="btn btn--principal" href="#jugar">JUGAR AHORA</a>
+          <a class="btn btn--secundario" href="#historia">Conocer la historia</a>
+        </div>
+        <ul class="metricas" aria-label="Métricas rápidas">
+          <li><b>500</b><span>votos para ganar</span></li>
+          <li><b>30</b><span>vidas iniciales</span></li>
+          <li><b><kbd>↑</kbd><kbd>↓</kbd></b><span>saltar · agacharse</span></li>
+        </ul>
+      </div>
+      <figure class="hero__img">
+        <img src="img/portada.jpg" alt="Captura del juego: el Presi salta un basurero en llamas en una calle de La Paz, con el teleférico de fondo" width="1920" height="1080">
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3. Historia -->
+  <section id="historia" class="seccion">
+    <div class="contenedor">
+      <span class="seccion__num">01</span>
+      <h2>Historia</h2>
+      <div class="columnas">
+        <article>
+          <h3>El mundo</h3>
+          <p>La acción transcurre en una versión estilizada de La Paz, Bolivia: calles empinadas flanqueadas por fachadas
+            de ladrillo y cemento, plazas, cruces con minibuses y trufis, y al fondo los cerros cubiertos de casas que
+            atraviesa el teleférico. La ciudad no se detiene nunca: es un recorrido infinito que se recicla tramo a tramo.</p>
+          <p>Es día de elecciones y el país vive una jornada de conflicto social. Los bloqueos cortan las vías con llantas y
+            basureros en llamas, los manifestantes levantan carteles de lado a lado de la calle, estallan petardos y la
+            policía responde con gas lacrimógeno.</p>
+        </article>
+        <article>
+          <h3>El conflicto</h3>
+          <p>El Presi necesita llegar a la gente en medio del caos. No puede dar marcha atrás ni esquivar por los costados:
+            solo le queda avanzar, saltando los bloqueos y agachándose ante lo que viene por el aire.</p>
+          <p>Cada segundo que se mantiene en pie es un mensaje a los votantes: <em>sigue en carrera</em>. Si junta
+            500 votos, la campaña triunfa y el Presi celebra bailando; si los golpes le quitan todas las vidas,
+            la candidatura termina en plena calle. La historia plantea, con humor y sátira, la idea de que en Bolivia
+            hacer campaña es una carrera de resistencia.</p>
+        </article>
+      </div>
+      <figure class="historia__img">
+        <img src="img/ciudad.jpg" alt="Cruce de calles con minibús, cancha deportiva, cerros llenos de casas y cabinas del teleférico" width="1920" height="1080" loading="lazy">
+        <figcaption>La plaza y el cruce: cada pocos tramos la calle se abre y se ven los cerros, el teleférico y el tránsito.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4. Personaje principal -->
+  <section id="personaje" class="seccion seccion--oscura">
+    <div class="contenedor personaje">
+      <figure class="personaje__img">
+        <img src="img/personaje.jpg" alt="Modelo 3D del Presi con traje azul y banda presidencial tricolor" width="1080" height="1080" loading="lazy">
+      </figure>
+      <div>
+        <span class="seccion__num">02</span>
+        <h2>Personaje principal</h2>
+        <h3 class="personaje__nombre">“El Presi”</h3>
+        <p><b>Rol:</b> candidato presidencial y protagonista. Es el único personaje controlable: se mantiene en el centro
+          de la pantalla mientras la ciudad avanza hacia él, al estilo de los runners clásicos de vista lateral.</p>
+        <p><b>Rasgos estéticos:</b> modelo 3D animado de estilo low-poly, con traje azul marino, camisa blanca y la
+          banda presidencial tricolor (rojo, amarillo y verde) cruzada al pecho, que contrasta con el ambiente de
+          protesta que lo rodea. Tiene animaciones propias para correr, saltar, deslizarse, recibir golpes por abajo y por
+          arriba, caer derrotado y bailar al ganar.</p>
+        <ul class="habilidades">
+          <li><b>Salto de campaña</b><span>Impulso vertical (fuerza 7) con caída acelerada ×2.5 para reaccionar rápido.</span></li>
+          <li><b>Deslice</b><span>Se agacha 0.85 s; su silueta se reduce a la mitad para pasar bajo carteles y petardos.</span></li>
+          <li><b>Aguante político</b><span>Tras un golpe parpadea y es invulnerable durante 2 s.</span></li>
+          <li><b>Baile de victoria</b><span>Al llegar a la meta de votos celebra en plena calle.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Mecánicas y controles -->
+  <section id="mecanicas" class="seccion">
+    <div class="contenedor">
+      <span class="seccion__num">03</span>
+      <h2>Mecánicas y controles</h2>
+
+      <div class="controles">
+        <div class="tecla"><kbd>↑</kbd><div><b>Flecha arriba</b><span>Saltar (solo desde el suelo)</span></div></div>
+        <div class="tecla"><kbd>↓</kbd><div><b>Flecha abajo</b><span>Agacharse / deslizarse 0.85 s</span></div></div>
+        <div class="tecla tecla--info"><kbd>Clic</kbd><div><b>Clic en el juego</b><span>Da foco al juego para que lea el teclado</span></div></div>
+      </div>
+
+      <h3>Obstáculos</h3>
+      <div class="tarjetas">
+        <article class="tarjeta"><span class="tag tag--saltar">Saltar</span><h4>Llanta en llamas</h4><p>El bloqueo más común. Quema una vida si la tocas.</p></article>
+        <article class="tarjeta"><span class="tag tag--saltar">Saltar</span><h4>Basurero en fuego</h4><p>Obstáculo bajo y ancho en medio de la calle.</p></article>
+        <article class="tarjeta"><span class="tag tag--saltar">Saltar</span><h4>Barrera</h4><p>Cartel de protesta colocado bajo, de lado a lado.</p></article>
+        <article class="tarjeta"><span class="tag tag--agachar">Agacharse</span><h4>Cartel alto</h4><p>La tela queda a la altura de la cabeza.</p></article>
+        <article class="tarjeta"><span class="tag tag--agachar">Agacharse</span><h4>Petardo</h4><p>Llega volando más rápido que la calle; a veces explota.</p></article>
+        <article class="tarjeta"><span class="tag tag--gas">Mareo</span><h4>Gas lacrimógeno</h4><p>No quita vida, pero la cámara gira 3 vueltas en 9 s y te desorienta.</p></article>
+      </div>
+
+      <h3>Reglas del sistema</h3>
+      <div class="reglas">
+        <div class="regla regla--gana"><h4>Victoria</h4><p>Los votos suben solos: 10 por segundo. Al llegar a <b>500 votos</b> el mundo se detiene y el Presi celebra.</p></div>
+        <div class="regla regla--pierde"><h4>Derrota</h4><p>Cada choque con un obstáculo resta 1 vida. Con <b>0 vidas</b> el Presi cae y aparece el panel de derrota.</p></div>
+        <div class="regla"><h4>Dificultad progresiva</h4><p>La velocidad sube de 10 a 24 m/s. Los obstáculos aéreos aparecen a partir de 120 m y las combinaciones (varios seguidos, saltar + agacharse) desde 250 m.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Datos e infografía -->
+  <section id="datos" class="seccion seccion--oscura">
+    <div class="contenedor">
+      <span class="seccion__num">04</span>
+      <h2>Datos del proyecto</h2>
+      <div class="datos">
+        <div class="dato"><b>500</b><span>Votos objetivo</span></div>
+        <div class="dato"><b>30</b><span>Vidas iniciales</span></div>
+        <div class="dato"><b>10/s</b><span>Votos por segundo</span></div>
+        <div class="dato"><b>~50 s</b><span>Tiempo mínimo para ganar</span></div>
+        <div class="dato"><b>10→24</b><span>Velocidad (m/s)</span></div>
+        <div class="dato"><b>6</b><span>Tipos de obstáculo</span></div>
+        <div class="dato"><b>1</b><span>Nivel infinito</span></div>
+        <div class="dato"><b>2</b><span>Teclas de control</span></div>
+      </div>
+
+      <div class="infografia">
+        <div>
+          <h3>¿Qué tan seguido sale cada obstáculo?</h3>
+          <ul class="barras">
+            <li style="--v:26%"><span>Llanta en llamas</span><i></i><b>26%</b></li>
+            <li style="--v:18%"><span>Basurero en fuego</span><i></i><b>18%</b></li>
+            <li style="--v:16%"><span>Cartel alto</span><i></i><b>16%</b></li>
+            <li style="--v:14%"><span>Petardo</span><i></i><b>14%</b></li>
+            <li style="--v:14%"><span>Gas lacrimógeno</span><i></i><b>14%</b></li>
+            <li style="--v:12%"><span>Barrera</span><i></i><b>12%</b></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Ficha técnica</h3>
+          <dl class="ficha">
+            <dt>Motor</dt><dd>Unity 6 (6000.6) · URP</dd>
+            <dt>Género</dt><dd>Endless runner 3D, vista lateral</dd>
+            <dt>Plataforma</dt><dd>Navegador web (WebGL)</dd>
+            <dt>Modelado</dt><dd>Blender (calles, fachadas, cerros, teleférico, vehículos, obstáculos)</dd>
+            <dt>Mundo</dt><dd>Tramos de calle, plazas y cerros reciclados (pooling): no se crea ni destruye nada mientras se juega</dd>
+            <dt>Ambientación</dt><dd>Teleférico, minibuses, trufis y autos en movimiento</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Jugar ahora -->
+  <section id="jugar" class="seccion">
+    <div class="contenedor">
+      <span class="seccion__num">05</span>
+      <h2>Jugar ahora</h2>
+      <div class="juego">
+        <div class="juego__marco" id="marco">
+          <button class="juego__iniciar" id="iniciar">
+            <span>▶</span> Cargar el juego
+          </button>
+        </div>
+        <div class="juego__acciones">
+          <a class="btn btn--principal" href="juego/index.html" target="_blank" rel="noopener">Abrir en pantalla completa</a>
+          <button class="btn btn--secundario" id="fullscreen" hidden>Pantalla completa</button>
+        </div>
+      </div>
+      <div class="columnas requisitos">
+        <article>
+          <h3>Requisitos mínimos</h3>
+          <ul>
+            <li>Computadora de escritorio o laptop con teclado.</li>
+            <li>Navegador actualizado: Chrome, Edge, Firefox u Opera (WebGL 2.0).</li>
+            <li>4 GB de RAM y gráficos integrados o superiores.</li>
+            <li>Conexión a internet para la primera descarga del juego.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Instrucciones</h3>
+          <ol>
+            <li>Pulsa <b>Cargar el juego</b> y espera a que termine la barra de carga.</li>
+            <li>Haz <b>clic dentro del juego</b> para que reciba el teclado.</li>
+            <li>Usa <kbd>↑</kbd> para saltar y <kbd>↓</kbd> para agacharte.</li>
+            <li>Para volver a jugar, recarga la página (F5).</li>
+            <li>Si no carga, activa la aceleración por hardware del navegador.</li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <span class="marca marca--pie"><span class="marca__franjas" aria-hidden="true"><i></i><i></i><i></i></span>MI BOLIVIA</span>
+    <p>Proyecto de la asignatura Game Development · Unidad 3 · Hecho con Unity.</p>
+    <a href="#inicio">Volver arriba ↑</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
