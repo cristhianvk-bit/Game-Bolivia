@@ -163,7 +163,102 @@ kbd {
 .pie a { color: var(--amarillo); }
 .marca--pie { font-size: 1.5rem; }
 
+/* Portal: identidad del desarrollador */
+:root { --azul: #2a5bd7; --azul-osc: #1d44a8; --pac: #ffd400; }
+.marca__texto { display: inline-flex; align-items: baseline; gap: 10px; }
+.marca__texto small { font: 600 .72rem/1 Inter, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--amarillo); }
+.nav__menu a.nav__cta--azul { background: var(--azul); }
+.nav__menu a.nav__cta--azul:hover { background: var(--azul-osc); }
+.btn--azul { background: var(--azul); color: #fff; letter-spacing: .06em; box-shadow: 0 8px 22px rgba(42, 91, 215, .4); }
+.btn--azul:hover { background: var(--azul-osc); }
+
+/* Menú de selección de juegos */
+.seleccion { padding: 64px 0 24px; }
+.seleccion__sub { color: var(--tenue); max-width: 70ch; }
+.seleccion__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 22px; }
+.juego-card { display: flex; flex-direction: column; gap: 8px; padding: 26px; border-radius: var(--radio); color: #fff; text-decoration: none; box-shadow: var(--sombra); transition: transform .15s; position: relative; overflow: hidden; }
+.juego-card:hover { transform: translateY(-3px); }
+.juego-card--bolivia { background: linear-gradient(135deg, rgba(23, 19, 15, .55), rgba(213, 43, 30, .85)), url("../img/portada.jpg") center / cover; }
+.juego-card--pacman { background: linear-gradient(135deg, rgba(6, 10, 31, .6), rgba(42, 91, 215, .88)), url("../img/pacman-mapa.jpg") center / cover; }
+.juego-card__num { font: 700 .75rem Inter, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--amarillo); }
+.juego-card b { font: 400 2.6rem/1 "Bebas Neue", Impact, sans-serif; letter-spacing: .02em; }
+.juego-card span { color: #f0eadf; max-width: 46ch; }
+.juego-card__ir { margin-top: 8px; font-weight: 700; color: #fff !important; }
+
+/* Secciones de juego: START encima del área de juego */
+.juego__barra { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 14px; }
+.juego__start { font-size: 1.05rem; padding: 14px 34px; }
+.btn[hidden] { display: none; }
+.juego__start--activo { background: var(--verde); box-shadow: none; }
+.juego__start--activo:hover { background: var(--verde); }
+.juego__estado { color: var(--tenue); font-size: .92rem; }
+.seccion--oscura .juego__estado { color: #bfb6a8; }
+.juego__marco--pacman { background: #05081c; border-color: var(--azul); }
+.juego__espera { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(0, 0, 0, .55); }
+.juego__espera span { color: #fff; font: 400 clamp(1.6rem, 4vw, 2.6rem) "Bebas Neue", Impact, sans-serif; letter-spacing: .08em; padding: 10px 22px; border: 2px dashed rgba(255, 255, 255, .5); border-radius: 10px; }
+.juego__marco--pacman .juego__espera { background: radial-gradient(circle at 50% 50%, rgba(42, 91, 215, .35), rgba(0, 0, 0, .6)); }
+.juego__marco:fullscreen { border: 0; border-radius: 0; }
+
+/* Pac-Man: información */
+.pacman__intro { max-width: 75ch; }
+.pacman__info { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 8px; }
+.pacman__info article { background: var(--oscuro-2); border: 1px solid rgba(255, 255, 255, .08); border-top: 4px solid var(--azul); border-radius: var(--radio); padding: 24px; }
+.pacman__info h3 { color: var(--pac); }
+.pacman__info ul { margin: 0; padding-left: 1.2em; color: #cfc6b8; }
+.pacman__info li { margin-bottom: 8px; }
+.pacman__info b { color: #fff; }
+.pacman__teclas { list-style: none; padding: 0 !important; display: grid; gap: 12px; }
+.pacman__teclas li { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0; }
+.pacman__teclas li > span:first-child { display: inline-flex; gap: 4px; }
+
+/* Pac-Man: portada */
+.hero--pacman { background: radial-gradient(900px 420px at 85% -10%, rgba(255, 212, 0, .16), transparent 60%), linear-gradient(180deg, #0b1233, #060a1f); border-top: 6px solid var(--azul); }
+.etiqueta--azul { background: var(--pac); }
+.hero__titulo-pac { font: 400 clamp(4.4rem, 11vw, 8.5rem)/.85 "Bebas Neue", Impact, sans-serif; margin: 18px 0 14px; color: var(--pac); text-shadow: 0 0 30px rgba(255, 212, 0, .25); }
+.hero__frase--pac { color: #7fb0ff; }
+.hero--pacman .metricas li { border-color: rgba(127, 176, 255, .25); }
+.hero__img--pac { border-color: var(--azul); transform: rotate(-1.2deg); }
+.hero__img--pac img { aspect-ratio: 4 / 3; }
+
+/* Pac-Man: secciones */
+.seccion__num--azul { color: var(--azul); }
+.seccion--oscura .seccion__num--azul { color: #7fb0ff; }
+.columnas--azul h3 { color: var(--azul); }
+.personajes-pac { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; margin-top: 18px; align-items: start; }
+.pj { background: var(--oscuro-2); border: 1px solid rgba(255, 255, 255, .08); border-radius: var(--radio); padding: 24px; }
+.pj--heroe { border-top: 4px solid var(--pac); }
+.pj--fantasma { border-left: 4px solid #e2463b; padding: 18px 20px; }
+.pj--fantasma h3 { color: #fff; font: 400 1.9rem/1 "Bebas Neue", sans-serif; letter-spacing: .04em; margin-bottom: 6px; }
+.pj--fantasma p { margin: 0; font-size: .95rem; }
+.pj__rol { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #7fb0ff; }
+.pj .personaje__nombre { color: var(--pac); margin-top: 6px; }
+.fantasmas { display: grid; gap: 14px; }
+.fantasmas__nota { font-size: .92rem; margin: 0; padding: 14px 16px; border: 1px dashed rgba(255, 255, 255, .2); border-radius: 10px; }
+.tag--moneda { background: #fff4b0; color: #6b5d00; }
+.tag--poder { background: #dfe8ff; color: var(--azul); }
+.regla--azul { background: var(--azul); }
+.regla--azul p { color: #fff; }
+.barras--azul i::after { background: #7fb0ff; }
+.barras--azul li { grid-template-columns: 170px 1fr 44px; }
+.barras__nota { font-size: .9rem; margin-top: 16px; }
+#pacman .pacman__info article { background: var(--papel); border: 1px solid var(--linea); border-top: 4px solid var(--azul); }
+#pacman .pacman__info h3 { color: var(--azul); }
+#pacman .pacman__info ul, #pacman .pacman__info ol { color: var(--tinta); margin: 0; padding-left: 1.2em; }
+#pacman .pacman__info b { color: var(--tinta); }
+
 /* Responsive */
+@media (max-width: 900px) {
+  .personajes-pac { grid-template-columns: 1fr; }
+}
+@media (max-width: 1080px) {
+  .nav__btn { display: block; }
+  .nav__menu { display: none; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; background: var(--oscuro); padding: 12px 16px 18px; }
+  .nav__menu.abierto { display: flex; }
+}
+@media (max-width: 760px) {
+  .seleccion__grid, .pacman__info { grid-template-columns: 1fr; }
+  .marca__texto small { display: none; }
+}
 @media (max-width: 900px) {
   .hero__grid, .columnas, .personaje, .infografia { grid-template-columns: 1fr; }
   .hero__img { transform: none; }

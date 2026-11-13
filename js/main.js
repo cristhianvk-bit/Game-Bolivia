@@ -19,22 +19,34 @@ const observador = new IntersectionObserver(entradas => {
 }, { rootMargin: '-45% 0px -50% 0px' });
 document.querySelectorAll('main section[id]').forEach(s => observador.observe(s));
 
-// Carga el juego de Unity solo cuando se pide (pesa varios MB)
-const marco = document.getElementById('marco');
-const iniciar = document.getElementById('iniciar');
-const fullscreen = document.getElementById('fullscreen');
-function cargarJuego() {
-  if (marco.querySelector('iframe')) return;
-  const iframe = document.createElement('iframe');
-  iframe.src = 'juego/index.html';
-  iframe.title = 'Mi Bolivia (Unity WebGL)';
-  iframe.allow = 'fullscreen; autoplay';
-  iframe.allowFullscreen = true;
-  marco.appendChild(iframe);
-  iniciar.remove();
-  fullscreen.hidden = false;
-  iframe.addEventListener('load', () => iframe.focus());
-}
-iniciar.addEventListener('click', cargarJuego);
-document.querySelectorAll('a[href="#jugar"]').forEach(a => a.addEventListener('click', () => setTimeout(cargarJuego, 400)));
-fullscreen.addEventListener('click', () => marco.requestFullscreen && marco.requestFullscreen());
+// Cada juego (Unity WebGL) queda en espera hasta que el usuario pulsa su botón START.
+// Se ejecuta dentro de su propia sección, en esta misma página (sin pestañas ni ventanas nuevas).
+document.querySelectorAll('.juego[data-juego]').forEach(juego => {
+  const start = juego.querySelector('.juego__start');
+  const full = juego.querySelector('.juego__full');
+  const estado = juego.querySelector('.juego__estado');
+  const marco = juego.querySelector('.juego__marco');
+
+  start.addEventListener('click', () => {
+    let iframe = marco.querySelector('iframe');
+    if (iframe) { iframe.focus(); return; }
+    iframe = document.createElement('iframe');
+    iframe.src = juego.dataset.juego;
+    iframe.title = juego.dataset.titulo;
+    iframe.allow = 'fullscreen; autoplay';
+    iframe.allowFullscreen = true;
+    marco.querySelector('.juego__espera')?.remove();
+    marco.appendChild(iframe);
+    marco.classList.add('juego__marco--activo');
+    start.textContent = '● En juego';
+    start.classList.add('juego__start--activo');
+    full.hidden = false;
+    estado.textContent = 'Cargando… cuando termine la barra, haz clic dentro del juego para usar el teclado.';
+    iframe.addEventListener('load', () => {
+      iframe.focus();
+      estado.textContent = 'Juego iniciado. Haz clic dentro del juego si no responde al teclado.';
+    });
+  });
+
+  full.addEventListener('click', () => marco.requestFullscreen && marco.requestFullscreen());
+});

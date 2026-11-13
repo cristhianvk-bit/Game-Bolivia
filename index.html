@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mi Bolivia — Endless Runner 3D</title>
-<meta name="description" content="Mi Bolivia: endless runner 3D hecho en Unity. Esquiva bloqueos, petardos y gas lacrimógeno por las calles de La Paz y junta 500 votos.">
+<title>Cristhian · Game Dev — Mi Bolivia y Pac-Man Bolivia</title>
+<meta name="description" content="Portal de Cristhian, game developer: Mi Bolivia (endless runner 3D) y Pac-Man Bolivia (laberinto 3D), ambos jugables en el navegador con Unity WebGL.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,17 +14,17 @@
 
 <header class="nav" id="inicio">
   <div class="nav__in">
-    <a class="marca" href="#inicio" aria-label="Mi Bolivia, inicio">
+    <a class="marca" href="#inicio" aria-label="Cristhian, game developer — inicio">
       <span class="marca__franjas" aria-hidden="true"><i></i><i></i><i></i></span>
-      MI BOLIVIA
+      <span class="marca__texto">CRISTHIAN <small>Game Developer</small></span>
     </a>
     <button class="nav__btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
     <nav id="menu" class="nav__menu">
-      <a href="#historia">Historia</a>
-      <a href="#personaje">Personaje</a>
-      <a href="#mecanicas">Mecánicas</a>
-      <a href="#datos">Datos</a>
-      <a href="#jugar" class="nav__cta">Jugar ahora</a>
+      <a href="#juegos">Juegos</a>
+      <a href="#historia">Info Mi Bolivia</a>
+      <a href="#pacman-inicio">Info Pac-Man</a>
+      <a href="#jugar" class="nav__cta">Juego 1 · Mi Bolivia</a>
+      <a href="#pacman" class="nav__cta nav__cta--azul">Juego 2 · Pac-Man</a>
     </nav>
   </div>
 </header>
@@ -35,15 +35,15 @@
   <section class="hero">
     <div class="contenedor hero__grid">
       <div class="hero__texto">
-        <span class="etiqueta">ENDLESS RUNNER 3D · UNITY</span>
+        <span class="etiqueta">PORTAL DE CRISTHIAN · 2 JUEGOS EN UNITY</span>
         <h1>MI<br>BOLIVIA</h1>
         <p class="hero__frase">Las calles están bloqueadas. La elección no espera.</p>
         <p class="hero__desc">El Presi corre por las calles de La Paz en plena jornada de protestas: llantas en llamas,
           carteles, petardos y gas lacrimógeno se cruzan en su camino. Cada segundo que resiste suma votos;
           llegar a <strong>500 votos</strong> antes de perder todas las vidas es la única forma de ganar.</p>
         <div class="hero__botones">
-          <a class="btn btn--principal" href="#jugar">JUGAR AHORA</a>
-          <a class="btn btn--secundario" href="#historia">Conocer la historia</a>
+          <a class="btn btn--principal" href="#jugar">JUEGO 1 · MI BOLIVIA</a>
+          <a class="btn btn--azul" href="#pacman">JUEGO 2 · PAC-MAN</a>
         </div>
         <ul class="metricas" aria-label="Métricas rápidas">
           <li><b>500</b><span>votos para ganar</span></li>
@@ -57,11 +57,33 @@
     </div>
   </section>
 
+  <!-- Menú de selección de juegos -->
+  <section id="juegos" class="seleccion">
+    <div class="contenedor">
+      <h2>Elige un juego</h2>
+      <p class="seleccion__sub">Los dos se juegan aquí mismo, cada uno en su propia sección de esta página. Ninguno arranca solo: cada uno tiene su botón <b>START</b>.</p>
+      <div class="seleccion__grid">
+        <a class="juego-card juego-card--bolivia" href="#jugar">
+          <span class="juego-card__num">Juego 1</span>
+          <b>Mi Bolivia</b>
+          <span>Endless runner 3D por las calles de La Paz. Salta bloqueos y junta 500 votos.</span>
+          <span class="juego-card__ir">Ir al juego ↓</span>
+        </a>
+        <a class="juego-card juego-card--pacman" href="#pacman">
+          <span class="juego-card__num">Juego 2</span>
+          <b>Pac-Man Bolivia</b>
+          <span>Laberinto 3D estilo Pac-Man sobre el mapa de Bolivia. Come los puntos y escapa de los fantasmas.</span>
+          <span class="juego-card__ir">Ir al juego ↓</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- 3. Historia -->
   <section id="historia" class="seccion">
     <div class="contenedor">
       <span class="seccion__num">01</span>
-      <h2>Historia</h2>
+      <h2>Historia · Mi Bolivia</h2>
       <div class="columnas">
         <article>
           <h3>El mundo</h3>
@@ -97,7 +119,7 @@
       </figure>
       <div>
         <span class="seccion__num">02</span>
-        <h2>Personaje principal</h2>
+        <h2>Personaje principal · Mi Bolivia</h2>
         <h3 class="personaje__nombre">“El Presi”</h3>
         <p><b>Rol:</b> candidato presidencial y protagonista. Es el único personaje controlable: se mantiene en el centro
           de la pantalla mientras la ciudad avanza hacia él, al estilo de los runners clásicos de vista lateral.</p>
@@ -119,7 +141,7 @@
   <section id="mecanicas" class="seccion">
     <div class="contenedor">
       <span class="seccion__num">03</span>
-      <h2>Mecánicas y controles</h2>
+      <h2>Mecánicas y controles · Mi Bolivia</h2>
 
       <div class="controles">
         <div class="tecla"><kbd>↑</kbd><div><b>Flecha arriba</b><span>Saltar (solo desde el suelo)</span></div></div>
@@ -150,7 +172,7 @@
   <section id="datos" class="seccion seccion--oscura">
     <div class="contenedor">
       <span class="seccion__num">04</span>
-      <h2>Datos del proyecto</h2>
+      <h2>Datos del proyecto · Mi Bolivia</h2>
       <div class="datos">
         <div class="dato"><b>500</b><span>Votos objetivo</span></div>
         <div class="dato"><b>30</b><span>Vidas iniciales</span></div>
@@ -193,16 +215,15 @@
   <section id="jugar" class="seccion">
     <div class="contenedor">
       <span class="seccion__num">05</span>
-      <h2>Jugar ahora</h2>
-      <div class="juego">
-        <div class="juego__marco" id="marco">
-          <button class="juego__iniciar" id="iniciar">
-            <span>▶</span> Cargar el juego
-          </button>
+      <h2>Juego 1 · Mi Bolivia</h2>
+      <div class="juego" data-juego="juego/index.html" data-titulo="Mi Bolivia (Unity WebGL)">
+        <div class="juego__barra">
+          <button class="btn btn--principal juego__start" type="button">▶ START</button>
+          <button class="btn btn--secundario juego__full" type="button" hidden>Pantalla completa</button>
+          <span class="juego__estado">En espera. Pulsa START cuando quieras jugar.</span>
         </div>
-        <div class="juego__acciones">
-          <a class="btn btn--principal" href="juego/index.html" target="_blank" rel="noopener">Abrir en pantalla completa</a>
-          <button class="btn btn--secundario" id="fullscreen" hidden>Pantalla completa</button>
+        <div class="juego__marco juego__marco--bolivia">
+          <div class="juego__espera"><span>En espera · pulsa START</span></div>
         </div>
       </div>
       <div class="columnas requisitos">
@@ -218,10 +239,234 @@
         <article>
           <h3>Instrucciones</h3>
           <ol>
-            <li>Pulsa <b>Cargar el juego</b> y espera a que termine la barra de carga.</li>
+            <li>Pulsa <b>START</b> y espera a que termine la barra de carga.</li>
             <li>Haz <b>clic dentro del juego</b> para que reciba el teclado.</li>
             <li>Usa <kbd>↑</kbd> para saltar y <kbd>↓</kbd> para agacharte.</li>
             <li>Para volver a jugar, recarga la página (F5).</li>
+            <li>Si no carga, activa la aceleración por hardware del navegador.</li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== JUEGO 2: PAC-MAN BOLIVIA ===================== -->
+
+  <!-- Portada del juego 2 -->
+  <section id="pacman-inicio" class="hero hero--pacman">
+    <div class="contenedor hero__grid">
+      <div class="hero__texto">
+        <span class="etiqueta etiqueta--azul">JUEGO 2 · LABERINTO 3D ESTILO PAC-MAN · UNITY</span>
+        <h2 class="hero__titulo-pac">PAC-MAN<br>BOLIVIA</h2>
+        <p class="hero__frase hero__frase--pac">411 monedas, 3 fantasmas y una sola salida.</p>
+        <p class="hero__desc">Rodrigo recorre un laberinto 3D levantado sobre el mapa de Bolivia: calles de tierra, muros de adobe,
+          ladrillo y piedra, plazas, casas coloniales y nevados. Debe juntar <strong>todas las monedas</strong> mientras
+          Evo, Lara y Argollo lo persiguen por los pasillos. Cuando no queda ninguna, la puerta se abre y solo falta
+          <strong>llegar a la salida</strong>.</p>
+        <div class="hero__botones">
+          <a class="btn btn--azul" href="#pacman">JUGAR PAC-MAN</a>
+          <a class="btn btn--secundario" href="#pacman-historia">Conocer la historia</a>
+        </div>
+        <ul class="metricas" aria-label="Métricas rápidas de Pac-Man Bolivia">
+          <li><b>411</b><span>monedas por recoger</span></li>
+          <li><b>3</b><span>vidas · 3 fantasmas</span></li>
+          <li><b><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></b><span>o flechas para moverse</span></li>
+        </ul>
+      </div>
+      <figure class="hero__img hero__img--pac">
+        <img src="img/pacman-mapa.jpg" alt="Captura del juego: laberinto 3D con monedas amarillas, muros de adobe, una plaza, una iglesia y un nevado; arriba el marcador de puntaje, puntos restantes y vidas" width="800" height="600" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Historia del juego 2 -->
+  <section id="pacman-historia" class="seccion">
+    <div class="contenedor">
+      <span class="seccion__num seccion__num--azul">06</span>
+      <h2>Historia · Pac-Man Bolivia</h2>
+      <div class="columnas columnas--azul">
+        <article>
+          <h3>El mundo</h3>
+          <p>El laberinto no es un tablero abstracto: está construido encima del mapa de Bolivia. Los pasillos son calles
+            de tierra y empedrado, y las paredes están hechas con los materiales del país: <b>adobe</b>, <b>ladrillo</b> y
+            <b>piedra</b>. Entre los muros aparecen casas de techo rojo, una plaza con pileta, una iglesia blanca, zonas de
+            bosque y un nevado andino que sobresale del mapa.</p>
+          <p>Todo se ve desde una cámara alta que sigue al jugador, como en el Pac-Man clásico, pero en 3D: así se puede
+            leer el laberinto completo y anticipar por dónde vienen los fantasmas.</p>
+        </article>
+        <article>
+          <h3>El conflicto</h3>
+          <p>Rodrigo tiene que recorrer todo el país moneda por moneda. Mientras lo hace, tres rivales (Evo, Lara y
+            Argollo) patrullan sus rutas y salen a perseguirlo en cuanto lo ven. Un toque de cualquiera de ellos le cuesta
+            una vida.</p>
+          <p>En cuatro puntos del mapa hay <b>monedas grandes</b>: al comerlas, la situación se invierte durante 8 segundos
+            y son los rivales los que huyen. Cuando Rodrigo junta las 411 monedas se abre la puerta de la plaza y tiene que
+            correr a la salida. Igual que Mi Bolivia, la historia usa el humor y la sátira política para contar una carrera
+            que solo termina cuando se llega a la meta.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personajes del juego 2 -->
+  <section id="pacman-personajes" class="seccion seccion--oscura">
+    <div class="contenedor">
+      <span class="seccion__num seccion__num--azul">07</span>
+      <h2>Personajes · Pac-Man Bolivia</h2>
+      <div class="personajes-pac">
+        <article class="pj pj--heroe">
+          <span class="pj__rol">Protagonista · jugador</span>
+          <h3 class="personaje__nombre">Rodrigo</h3>
+          <p><b>Rol:</b> es el “Pac-Man” de esta versión y el único personaje que se controla. Corre por los pasillos
+            recogiendo monedas y, con la moneda grande, puede comerse a los fantasmas.</p>
+          <p><b>Rasgos estéticos:</b> modelo 3D animado con traje azul marino y la banda presidencial tricolor (rojo,
+            amarillo y verde) con medalla al pecho. Tiene animaciones de reposo y carrera. Al perder una vida gira, salta y cae
+            de espaldas, y al ganar da tres saltos girando en el mismo lugar.</p>
+          <ul class="habilidades">
+            <li><b>Velocidad 3 m/s</b><span>Más rápido que un fantasma patrullando, pero más lento que uno que lo persigue.</span></li>
+            <li><b>Moneda grande</b><span>8 s de poder: los fantasmas se vuelven azules, huyen y se pueden comer.</span></li>
+            <li><b>3 vidas</b><span>Si lo atrapan, vuelve al inicio y los fantasmas regresan a sus puntos de aparición.</span></li>
+            <li><b>Baile de victoria</b><span>Al tocar la salida la cámara se acerca y Rodrigo celebra.</span></li>
+          </ul>
+        </article>
+        <div class="fantasmas">
+          <article class="pj pj--fantasma">
+            <span class="pj__rol">Fantasma 1</span>
+            <h3>Evo</h3>
+            <p>Patrulla una de las dos rutas largas del mapa (12 puntos de patrulla), así que cubre mucho terreno y
+              aparece por sorpresa en los cruces.</p>
+          </article>
+          <article class="pj pj--fantasma">
+            <span class="pj__rol">Fantasma 2</span>
+            <h3>Lara</h3>
+            <p>También vigila una ruta de 12 puntos, en otra zona del laberinto. Entre Lara y Evo cubren buena parte de
+              los pasillos principales.</p>
+          </article>
+          <article class="pj pj--fantasma">
+            <span class="pj__rol">Fantasma 3</span>
+            <h3>Argollo</h3>
+            <p>Modelo con ropa de obrero de construcción. Patrulla una ruta corta de 6 puntos y protege una zona
+              concreta del mapa, así que es difícil esquivarlo ahí.</p>
+          </article>
+          <p class="fantasmas__nota">Los tres usan la misma inteligencia artificial (NavMesh): patrullan, ven a Rodrigo
+            a 8 m, lo persiguen a 3.5 m/s y, si lo pierden de vista, lo siguen buscando 2 segundos más.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mecánicas del juego 2 -->
+  <section id="pacman-mecanicas" class="seccion">
+    <div class="contenedor">
+      <span class="seccion__num seccion__num--azul">08</span>
+      <h2>Mecánicas y controles · Pac-Man Bolivia</h2>
+
+      <div class="controles">
+        <div class="tecla"><kbd>W</kbd><div><b>W / ↑</b><span>Moverse hacia arriba</span></div></div>
+        <div class="tecla"><kbd>S</kbd><div><b>S / ↓</b><span>Moverse hacia abajo</span></div></div>
+        <div class="tecla"><kbd>A</kbd><div><b>A / ←</b><span>Moverse a la izquierda</span></div></div>
+        <div class="tecla"><kbd>D</kbd><div><b>D / →</b><span>Moverse a la derecha</span></div></div>
+        <div class="tecla"><kbd>R</kbd><div><b>R</b><span>Jugar de nuevo en la pantalla final</span></div></div>
+        <div class="tecla tecla--info"><kbd>Clic</kbd><div><b>Clic en el juego</b><span>Da foco al juego para que lea el teclado</span></div></div>
+      </div>
+
+      <h3>Objetos del laberinto</h3>
+      <div class="tarjetas">
+        <article class="tarjeta"><span class="tag tag--moneda">Recoger</span><h4>Moneda</h4><p>Hay 411 repartidas por los pasillos. Cada una suma 10 puntos y suena con un tono distinto.</p></article>
+        <article class="tarjeta"><span class="tag tag--poder">Poder</span><h4>Moneda grande</h4><p>4 en todo el mapa. Activa 8 s de poder; si comes otra, el tiempo vuelve a empezar.</p></article>
+        <article class="tarjeta"><span class="tag tag--agachar">Peligro</span><h4>Fantasmas</h4><p>Evo, Lara y Argollo. Si te tocan pierdes una vida, salvo que tengas el poder activo.</p></article>
+        <article class="tarjeta"><span class="tag tag--gas">Vulnerable</span><h4>Fantasma azul</h4><p>Con el poder activo huyen buscando el punto más lejano de ti. Al comerlos vuelven a su punto de aparición.</p></article>
+        <article class="tarjeta"><span class="tag tag--saltar">Bloqueo</span><h4>Puerta de la plaza</h4><p>Está cerrada hasta que recoges todas las monedas. Entonces aparece el aviso “Dirígete a la salida”.</p></article>
+        <article class="tarjeta"><span class="tag tag--moneda">Meta</span><h4>Salida</h4><p>Zona de victoria detrás de la puerta. Llegar a ella termina la partida con tu puntaje final.</p></article>
+      </div>
+
+      <h3>Reglas del sistema</h3>
+      <div class="reglas">
+        <div class="regla regla--gana"><h4>Victoria</h4><p>Recoger las <b>411 monedas</b> abre la puerta. Al llegar a la salida Rodrigo celebra y aparece el panel de victoria con el puntaje final.</p></div>
+        <div class="regla regla--pierde"><h4>Derrota</h4><p>Cada vez que un fantasma te toca pierdes 1 vida. Con <b>0 vidas</b> aparece el panel “Juego terminado”.</p></div>
+        <div class="regla regla--azul"><h4>Modo poder</h4><p>Durante <b>8 s</b> los fantasmas se ponen azules y huyen; en los últimos 2.5 s parpadean en blanco para avisar que el poder se acaba. Cambia la música y un contador muestra el tiempo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Datos del juego 2 -->
+  <section id="pacman-datos" class="seccion seccion--oscura">
+    <div class="contenedor">
+      <span class="seccion__num seccion__num--azul">09</span>
+      <h2>Datos del proyecto · Pac-Man Bolivia</h2>
+      <div class="datos">
+        <div class="dato"><b>411</b><span>Monedas en el laberinto</span></div>
+        <div class="dato"><b>4 110</b><span>Puntos por todas las monedas</span></div>
+        <div class="dato"><b>4</b><span>Monedas grandes (poder)</span></div>
+        <div class="dato"><b>8 s</b><span>Duración del poder</span></div>
+        <div class="dato"><b>3</b><span>Fantasmas con IA</span></div>
+        <div class="dato"><b>3</b><span>Vidas iniciales</span></div>
+        <div class="dato"><b>8 m</b><span>Alcance de visión de un fantasma</span></div>
+        <div class="dato"><b>1</b><span>Mapa: Bolivia</span></div>
+      </div>
+
+      <div class="infografia">
+        <div>
+          <h3>Velocidades (m/s)</h3>
+          <ul class="barras barras--azul">
+            <li style="--v:27.7%"><span>Fantasma persiguiendo</span><i></i><b>3.5</b></li>
+            <li style="--v:23.8%"><span>Rodrigo</span><i></i><b>3.0</b></li>
+            <li style="--v:19.8%"><span>Fantasma patrullando</span><i></i><b>2.5</b></li>
+            <li style="--v:17.4%"><span>Fantasma huyendo</span><i></i><b>2.2</b></li>
+          </ul>
+          <p class="barras__nota">Un fantasma que te persigue es más rápido que tú: la única forma de escapar es cortar camino por
+            el laberinto o usar una moneda grande.</p>
+        </div>
+        <div>
+          <h3>Ficha técnica</h3>
+          <dl class="ficha">
+            <dt>Motor</dt><dd>Unity 6 · URP</dd>
+            <dt>Género</dt><dd>Laberinto 3D estilo Pac-Man, cámara cenital</dd>
+            <dt>Plataforma</dt><dd>Navegador web (WebGL) y Windows</dd>
+            <dt>IA</dt><dd>NavMesh: patrulla, persecución con memoria de 2 s y huida al punto más lejano del jugador</dd>
+            <dt>Mapa</dt><dd>Silueta de Bolivia con muros de adobe, ladrillo y piedra, plazas, casas, bosque y nevados</dd>
+            <dt>Audio</dt><dd>Música normal y de poder, sonidos de moneda, fantasma comido, victoria y derrota</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jugar juego 2 -->
+  <section id="pacman" class="seccion">
+    <div class="contenedor">
+      <span class="seccion__num">10</span>
+      <h2>Jugar · Pac-Man Bolivia</h2>
+      <p class="pacman__intro">Ayuda a Rodrigo a recoger las 411 monedas del laberinto y a escapar por la salida. El juego queda en espera
+        hasta que pulses <b>START</b>.</p>
+      <div class="juego juego--pacman" data-juego="pacman/index.html" data-titulo="Pac-Man Bolivia (Unity WebGL)">
+        <div class="juego__barra">
+          <button class="btn btn--azul juego__start" type="button">▶ START</button>
+          <button class="btn btn--secundario juego__full" type="button" hidden>Pantalla completa</button>
+          <span class="juego__estado">En espera. Pulsa START cuando quieras jugar.</span>
+        </div>
+        <div class="juego__marco juego__marco--pacman">
+          <div class="juego__espera"><span>En espera · pulsa START</span></div>
+        </div>
+      </div>
+
+      <div class="pacman__info">
+        <article>
+          <h3>Requisitos mínimos</h3>
+          <ul>
+            <li>Computadora de escritorio o laptop con teclado.</li>
+            <li>Navegador actualizado: Chrome, Edge, Firefox u Opera (WebGL 2.0).</li>
+            <li>4 GB de RAM y gráficos integrados o superiores.</li>
+            <li>Conexión a internet para la primera descarga del juego (~65 MB).</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Instrucciones</h3>
+          <ol>
+            <li>Pulsa <b>START</b> y espera a que termine la barra de carga.</li>
+            <li>Haz <b>clic dentro del juego</b> para que reciba el teclado.</li>
+            <li>Muévete con <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> o con las flechas.</li>
+            <li>En la pantalla de victoria o derrota pulsa <kbd>R</kbd> para jugar de nuevo.</li>
             <li>Si no carga, activa la aceleración por hardware del navegador.</li>
           </ol>
         </article>
@@ -232,8 +477,8 @@
 
 <footer class="pie">
   <div class="contenedor">
-    <span class="marca marca--pie"><span class="marca__franjas" aria-hidden="true"><i></i><i></i><i></i></span>MI BOLIVIA</span>
-    <p>Proyecto de la asignatura Game Development · Unidad 3 · Hecho con Unity.</p>
+    <span class="marca marca--pie"><span class="marca__franjas" aria-hidden="true"><i></i><i></i><i></i></span>CRISTHIAN</span>
+    <p>Game Development · Juego 1: Mi Bolivia · Juego 2: Pac-Man Bolivia · Hecho con Unity.</p>
     <a href="#inicio">Volver arriba ↑</a>
   </div>
 </footer>
